@@ -46,14 +46,15 @@
 
 @layer base {
   :root {
-    --color-primary: #102A43;
-    --color-crimson: #F00037;
-    --color-crimson-hover: #D0002F;
-    --color-secondary: #2563EB;
-    --color-accent: #38BDF8;
+    --color-primary: #041934;
+    --color-primary-dark: #020E1D;
+    --color-primary-light: #0B254A;
+    --color-gold: #D39B3A;
+    --color-gold-hover: #B88226;
+    --color-gold-light: #FDF9F0;
+    --color-gold-glow: #F5C067;
     --color-bg-alt: #F8FAFC;
-    --color-pink-wash: #FFF4F7;
-    --color-text-dark: #0F172A;
+    --color-text-dark: #041934;
     --font-gellix: 'gellix', 'gellix Fallback', system-ui, -apple-system, sans-serif;
   }
 
@@ -61,17 +62,19 @@
     font-family: 'gellix', 'gellix Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     scroll-behavior: smooth;
     letter-spacing: -0.012em;
+    overflow-x: hidden;
   }
 
   body {
     font-family: 'gellix', 'gellix Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #0B0F17;
+    color: #0F172A;
     background-color: #FFFFFF;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 
-  /* Titles & Headings - Deep Crisp Black */
+  /* Titles & Headings - Deep Midnight Blue / Charcoal */
   h1, h2, h3, h4, h5, h6 {
     font-family: 'gellix', 'gellix Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     letter-spacing: -0.025em;
@@ -83,9 +86,9 @@
     font-family: 'gellix', 'gellix Fallback', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
 
-  /* Default paragraph text on light themes is black */
+  /* Default paragraph text on light themes */
   p {
-    color: #0B0F17;
+    color: #1E293B;
   }
 }
 
@@ -118,9 +121,15 @@
   animation: bounceSubtle 3s ease-in-out infinite;
 }
 
-/* AlmaBetter-inspired subtle gradient text & cards */
-.gradient-text-red {
-  background: linear-gradient(135deg, #F00037 0%, #FF4D79 100%);
+/* SCOPE Logo-inspired Gradients */
+.gradient-text-gold {
+  background: linear-gradient(135deg, #D39B3A 0%, #F5C067 50%, #B88226 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-navy {
+  background: linear-gradient(135deg, #041934 0%, #0B254A 50%, #1E40AF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -131,5 +140,10 @@
 
 .card-hover-lift:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 30px -10px rgba(4, 25, 52, 0.1);
+}
+
+/* Smooth AOS mobile optimization to eliminate overflow glitches */
+[data-aos] {
+  pointer-events: auto !important;
 }

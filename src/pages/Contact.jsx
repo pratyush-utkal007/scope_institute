@@ -125,11 +125,11 @@ export default function Contact() {
   return (
     <div className="bg-[#F8FAFC] min-h-screen">
       {/* AlmaBetter-Style Dark Page Header */}
-      <section className="bg-[#0B0F17] text-white py-16 md:py-20 relative overflow-hidden border-b border-white/10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#F00037]/20 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-[#041934] text-white py-16 md:py-20 relative overflow-hidden border-b border-white/10">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D39B3A]/20 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-red-300 text-xs font-bold mb-4 backdrop-blur-sm">
-            <Building2 className="w-4 h-4 text-[#F00037]" />
+            <Building2 className="w-4 h-4 text-[#D39B3A]" />
             <span>Admissions & Campus Enquiries</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-white max-w-3xl mx-auto">
@@ -149,13 +149,13 @@ export default function Contact() {
             <div className="lg:col-span-5 space-y-6" data-aos="fade-right">
               <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#F00037] block mb-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#D39B3A] block mb-1">
                     Direct Contact
                   </span>
-                  <h2 className="text-2xl font-extrabold text-[#0B0F17]">
+                  <h2 className="text-2xl font-extrabold text-[#041934]">
                     Visit Our Campus or Reach Out
                   </h2>
-                  <p className="text-sm text-[#0B0F17] mt-2 font-normal">
+                  <p className="text-sm text-[#041934] mt-2 font-normal">
                     Our academic counsellors are available 6 days a week to assist prospective students and parents.
                   </p>
                 </div>
@@ -164,12 +164,12 @@ export default function Contact() {
                 <div className="space-y-4 pt-2">
                   {/* Address */}
                   <div className="flex items-start gap-4 p-4 rounded-2xl bg-[#F8FAFC] border border-slate-200/80">
-                    <div className="w-10 h-10 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center shrink-0 font-bold">
+                    <div className="w-10 h-10 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center shrink-0 font-bold">
                       <MapPin className="w-5 h-5" />
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Campus Address</h4>
-                      <p className="text-sm text-[#0B0F17] mt-1 leading-snug">{INSTITUTE_INFO.address}</p>
+                      <p className="text-sm text-[#041934] mt-1 leading-snug">{INSTITUTE_INFO.address}</p>
                     </div>
                   </div>
 
@@ -180,10 +180,10 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Admissions Helpline</h4>
-                      <a href={`tel:${INSTITUTE_INFO.phone}`} className="text-sm text-[#F00037] font-bold hover:underline mt-1 block">
+                      <a href={`tel:${INSTITUTE_INFO.phone}`} className="text-sm text-[#D39B3A] font-bold hover:underline mt-1 block">
                         {INSTITUTE_INFO.phone}
                       </a>
-                      <p className="text-xs text-[#0B0F17] mt-0.5">Call or WhatsApp for immediate enquiry</p>
+                      <p className="text-xs text-[#041934] mt-0.5">Call or WhatsApp for immediate enquiry</p>
                     </div>
                   </div>
 
@@ -197,7 +197,7 @@ export default function Contact() {
                       <a href={`mailto:${INSTITUTE_INFO.email}`} className="text-sm text-blue-600 font-bold hover:underline mt-1 block">
                         {INSTITUTE_INFO.email}
                       </a>
-                      <p className="text-xs text-[#0B0F17] mt-0.5">Response within 24 working hours</p>
+                      <p className="text-xs text-[#041934] mt-0.5">Response within 24 working hours</p>
                     </div>
                   </div>
 
@@ -208,14 +208,14 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Visiting Hours</h4>
-                      <p className="text-sm text-[#0B0F17] mt-1 leading-snug">{INSTITUTE_INFO.workingHours}</p>
+                      <p className="text-sm text-[#041934] mt-1 leading-snug">{INSTITUTE_INFO.workingHours}</p>
                     </div>
                   </div>
                 </div>
 
                 {/* Assurance badge */}
-                <div className="p-4 rounded-2xl bg-[#FFF4F7] border border-[#F00037]/20 text-xs text-[#0B0F17] font-medium flex items-center gap-2.5">
-                  <Sparkles className="w-4 h-4 text-[#F00037] shrink-0" />
+                <div className="p-4 rounded-2xl bg-[#FDF9F0] border border-[#D39B3A]/20 text-xs text-[#041934] font-medium flex items-center gap-2.5">
+                  <Sparkles className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Free demo class & lab tour available upon prior appointment.</span>
                 </div>
               </div>
@@ -224,10 +224,10 @@ export default function Contact() {
               <div className="bg-white rounded-3xl border border-slate-200 p-4 shadow-sm overflow-hidden">
                 <div className="flex items-center justify-between mb-3 px-2">
                   <span className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
-                    <MapPin className="w-4 h-4 text-[#F00037]" />
+                    <MapPin className="w-4 h-4 text-[#D39B3A]" />
                     Institute Location Map
                   </span>
-                  <span className="text-[11px] text-[#0B0F17] font-semibold">Chandrasekharpur, Bhubaneswar</span>
+                  <span className="text-[11px] text-[#041934] font-semibold">Chandrasekharpur, Bhubaneswar</span>
                 </div>
 
                 <div className="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-100 border border-slate-200">
@@ -246,13 +246,13 @@ export default function Contact() {
             <div className="lg:col-span-7" data-aos="fade-left">
               <div className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200 shadow-sm">
                 <div className="mb-8">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#F00037] block mb-1">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#D39B3A] block mb-1">
                     Get in Touch
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0B0F17]">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#041934]">
                     Send an Admission Enquiry
                   </h2>
-                  <p className="text-sm text-[#0B0F17] mt-1 font-normal">
+                  <p className="text-sm text-[#041934] mt-1 font-normal">
                     Fill out the form below with your course interest. We will provide full batch schedules and fee details.
                   </p>
                 </div>
@@ -261,7 +261,7 @@ export default function Contact() {
                   {/* Full Name */}
                   <div>
                     <label htmlFor="contact-fullName" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                      Full Name <span className="text-[#F00037]">*</span>
+                      Full Name <span className="text-[#D39B3A]">*</span>
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -278,13 +278,13 @@ export default function Contact() {
                         placeholder="Enter your full name"
                         className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                           errors.fullName && touched.fullName
-                            ? 'border-red-400 focus:ring-red-200 bg-red-50/20'
-                            : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                            ? 'border-red-400 focus:ring-amber-200 bg-red-50/20'
+                            : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                         }`}
                       />
                     </div>
                     {errors.fullName && touched.fullName && (
-                      <p className="text-xs text-[#F00037] mt-1.5">{errors.fullName}</p>
+                      <p className="text-xs text-[#D39B3A] mt-1.5">{errors.fullName}</p>
                     )}
                   </div>
 
@@ -293,7 +293,7 @@ export default function Contact() {
                     {/* Mobile Number */}
                     <div>
                       <label htmlFor="contact-mobileNumber" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                        Mobile Number <span className="text-[#F00037]">*</span>
+                        Mobile Number <span className="text-[#D39B3A]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -311,20 +311,20 @@ export default function Contact() {
                           placeholder="10-digit mobile number"
                           className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                             errors.mobileNumber && touched.mobileNumber
-                              ? 'border-red-400 focus:ring-red-200 bg-red-50/20'
-                              : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                              ? 'border-red-400 focus:ring-amber-200 bg-red-50/20'
+                              : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                           }`}
                         />
                       </div>
                       {errors.mobileNumber && touched.mobileNumber && (
-                        <p className="text-xs text-[#F00037] mt-1.5">{errors.mobileNumber}</p>
+                        <p className="text-xs text-[#D39B3A] mt-1.5">{errors.mobileNumber}</p>
                       )}
                     </div>
 
                     {/* Email Address */}
                     <div>
                       <label htmlFor="contact-email" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                        Email Address <span className="text-[#F00037]">*</span>
+                        Email Address <span className="text-[#D39B3A]">*</span>
                       </label>
                       <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -341,13 +341,13 @@ export default function Contact() {
                           placeholder="your.email@example.com"
                           className={`w-full pl-10 pr-4 py-3 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                             errors.email && touched.email
-                              ? 'border-red-400 focus:ring-red-200 bg-red-50/20'
-                              : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                              ? 'border-red-400 focus:ring-amber-200 bg-red-50/20'
+                              : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                           }`}
                         />
                       </div>
                       {errors.email && touched.email && (
-                        <p className="text-xs text-[#F00037] mt-1.5">{errors.email}</p>
+                        <p className="text-xs text-[#D39B3A] mt-1.5">{errors.email}</p>
                       )}
                     </div>
                   </div>
@@ -355,7 +355,7 @@ export default function Contact() {
                   {/* Course Interested In */}
                   <div>
                     <label htmlFor="contact-course" className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
-                      Course Interested In <span className="text-[#F00037]">*</span>
+                      Course Interested In <span className="text-[#D39B3A]">*</span>
                     </label>
                     <CustomSelect
                       id="contact-course"
@@ -369,7 +369,7 @@ export default function Contact() {
                       placeholder="Select a programming course"
                     />
                     {errors.course && touched.course && (
-                      <p className="text-xs text-[#F00037] mt-1.5">{errors.course}</p>
+                      <p className="text-xs text-[#D39B3A] mt-1.5">{errors.course}</p>
                     )}
                   </div>
 
@@ -390,14 +390,14 @@ export default function Contact() {
                         onChange={handleChange}
                         disabled={isSubmitting}
                         placeholder="Tell us about your educational background or preferred timings (e.g. Weekend batch)..."
-                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#F00037] focus:ring-2 focus:ring-red-100 transition-all resize-none"
+                        className="w-full pl-10 pr-4 py-3 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#D39B3A] focus:ring-2 focus:ring-amber-100 transition-all resize-none"
                       />
                     </div>
                   </div>
 
                   {/* Privacy Reassurance */}
-                  <div className="flex items-center gap-2 p-3 bg-[#FFF4F7] rounded-xl text-xs text-slate-700 border border-[#F00037]/20">
-                    <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <div className="flex items-center gap-2 p-3 bg-[#FDF9F0] rounded-xl text-xs text-slate-700 border border-[#D39B3A]/20">
+                    <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                     <span>Your contact details are strictly confidential and will only be used to answer your enquiry.</span>
                   </div>
 
@@ -406,7 +406,7 @@ export default function Contact() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm shadow-xl shadow-red-500/25 transition-all transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                      className="w-full inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#D39B3A] hover:bg-[#B88226] text-white font-bold text-sm shadow-xl shadow-amber-500/25 transition-all transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                     >
                       {isSubmitting ? (
                         <>

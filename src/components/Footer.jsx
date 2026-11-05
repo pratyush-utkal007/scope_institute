@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-  GraduationCap,
   MapPin,
   Phone,
   Mail,
@@ -11,6 +10,7 @@ import {
 } from 'lucide-react';
 import { COURSES, INSTITUTE_INFO } from '../data/courses';
 import { useEnquiry } from '../hooks/useEnquiry';
+import { getAssetUrl } from '../utils/assets';
 
 const FacebookIcon = () => (
   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -46,20 +46,24 @@ export default function Footer() {
   const { openEnquiryModal } = useEnquiry();
 
   return (
-    <footer className="bg-[#0B0F17] text-slate-300 pt-16 pb-8 border-t border-white/10">
+    <footer className="bg-[#020E1D] text-slate-300 pt-16 pb-8 border-t border-[#D39B3A]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
           {/* Institute Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#0B0F17] to-[#F00037] flex items-center justify-center text-white shadow-md border border-white/10">
-                <GraduationCap className="w-6 h-6 text-white" />
+            <Link to="/" className="flex items-center gap-3.5 group">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/10 p-2 flex items-center justify-center border border-white/15 group-hover:border-[#D39B3A]/50 transition-colors shrink-0">
+                <img
+                  src={getAssetUrl("/images/scope_logo.png")}
+                  alt="SCOPE Institute"
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
-                <span className="text-xl font-extrabold tracking-tight text-white block">
-                  SCOPE <span className="text-[#F00037] font-bold">INSTITUTE</span>
+                <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-white block">
+                  SCOPE <span className="text-[#D39B3A] font-bold">INSTITUTE</span>
                 </span>
-                <span className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
+                <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-slate-400 mt-1 block">
                   Coaching & Computer Training
                 </span>
               </div>
@@ -75,7 +79,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Facebook"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#F00037] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D39B3A] text-slate-300 hover:text-[#041934] flex items-center justify-center transition-colors border border-white/10"
               >
                 <FacebookIcon />
               </a>
@@ -84,7 +88,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Twitter"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#F00037] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D39B3A] text-slate-300 hover:text-[#041934] flex items-center justify-center transition-colors border border-white/10"
               >
                 <TwitterIcon />
               </a>
@@ -93,7 +97,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#F00037] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D39B3A] text-slate-300 hover:text-[#041934] flex items-center justify-center transition-colors border border-white/10"
               >
                 <InstagramIcon />
               </a>
@@ -102,7 +106,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#F00037] text-slate-300 hover:text-white flex items-center justify-center transition-colors border border-white/10"
+                className="w-9 h-9 rounded-lg bg-white/5 hover:bg-[#D39B3A] text-slate-300 hover:text-[#041934] flex items-center justify-center transition-colors border border-white/10"
               >
                 <LinkedinIcon />
               </a>
@@ -117,31 +121,31 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/" className="hover:text-[#F00037] transition-colors flex items-center gap-2">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F00037]" /> Home
+                <Link to="/" className="hover:text-[#D39B3A] transition-colors flex items-center gap-2">
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D39B3A]" /> Home
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-[#F00037] transition-colors flex items-center gap-2">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F00037]" /> About Institute
+                <Link to="/about" className="hover:text-[#D39B3A] transition-colors flex items-center gap-2">
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D39B3A]" /> About Institute
                 </Link>
               </li>
               <li>
-                <Link to="/courses" className="hover:text-[#F00037] transition-colors flex items-center gap-2">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F00037]" /> All Courses
+                <Link to="/courses" className="hover:text-[#D39B3A] transition-colors flex items-center gap-2">
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D39B3A]" /> All Courses
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-[#F00037] transition-colors flex items-center gap-2">
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F00037]" /> Contact & Admissions
+                <Link to="/contact" className="hover:text-[#D39B3A] transition-colors flex items-center gap-2">
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D39B3A]" /> Contact & Admissions
                 </Link>
               </li>
               <li>
                 <button
                   onClick={() => openEnquiryModal()}
-                  className="hover:text-[#F00037] transition-colors flex items-center gap-2 text-left cursor-pointer"
+                  className="hover:text-[#D39B3A] transition-colors flex items-center gap-2 text-left cursor-pointer"
                 >
-                  <ArrowRight className="w-3.5 h-3.5 text-[#F00037]" /> Instant Course Enquiry
+                  <ArrowRight className="w-3.5 h-3.5 text-[#D39B3A]" /> Instant Course Enquiry
                 </button>
               </li>
             </ul>
@@ -157,13 +161,13 @@ export default function Footer() {
                 <li key={course.id}>
                   <button
                     onClick={() => openEnquiryModal(course.title)}
-                    className="hover:text-[#F00037] transition-colors flex items-center justify-between w-full group cursor-pointer text-left"
+                    className="hover:text-[#D39B3A] transition-colors flex items-center justify-between w-full group cursor-pointer text-left"
                   >
                     <span className="flex items-center gap-2">
-                      <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#F00037] transition-colors" />
+                      <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#D39B3A] transition-colors" />
                       {course.title}
                     </span>
-                    <span className="text-[11px] px-2 py-0.5 rounded bg-white/5 text-slate-400 group-hover:bg-[#F00037]/20 group-hover:text-[#F00037]">
+                    <span className="text-[11px] px-2 py-0.5 rounded bg-white/5 text-slate-400 group-hover:bg-[#D39B3A]/20 group-hover:text-[#D39B3A]">
                       {course.duration}
                     </span>
                   </button>
@@ -179,23 +183,23 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3.5 text-sm">
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#F00037] shrink-0 mt-0.5" />
+                <MapPin className="w-4 h-4 text-[#D39B3A] shrink-0 mt-0.5" />
                 <span className="text-slate-300 leading-snug">{INSTITUTE_INFO.address}</span>
               </li>
               <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#F00037] shrink-0" />
-                <a href={`tel:${INSTITUTE_INFO.phone}`} className="hover:text-[#F00037] transition-colors font-semibold">
+                <Phone className="w-4 h-4 text-[#D39B3A] shrink-0" />
+                <a href={`tel:${INSTITUTE_INFO.phone}`} className="hover:text-[#D39B3A] transition-colors font-semibold">
                   {INSTITUTE_INFO.phone}
                 </a>
               </li>
               <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#F00037] shrink-0" />
-                <a href={`mailto:${INSTITUTE_INFO.email}`} className="hover:text-[#F00037] transition-colors font-semibold">
+                <Mail className="w-4 h-4 text-[#D39B3A] shrink-0" />
+                <a href={`mailto:${INSTITUTE_INFO.email}`} className="hover:text-[#D39B3A] transition-colors font-semibold">
                   {INSTITUTE_INFO.email}
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-[#F00037] shrink-0 mt-0.5" />
+                <Clock className="w-4 h-4 text-[#D39B3A] shrink-0 mt-0.5" />
                 <span className="text-slate-400 text-xs">{INSTITUTE_INFO.workingHours}</span>
               </li>
             </ul>
@@ -206,7 +210,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
           <p>© {new Date().getFullYear()} SCOPE INSTITUTE. All rights reserved.</p>
           <div className="flex items-center gap-2 text-slate-400">
-            <ShieldCheck className="w-4 h-4 text-[#F00037]" />
+            <ShieldCheck className="w-4 h-4 text-[#D39B3A]" />
             <span>Dedicated Computer Training & Practical Programming Coaching</span>
           </div>
         </div>

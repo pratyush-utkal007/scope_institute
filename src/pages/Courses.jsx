@@ -25,6 +25,7 @@ import {
 import { COURSES } from '../data/courses';
 import { useEnquiry } from '../hooks/useEnquiry';
 import CTASection from '../components/CTASection';
+import { getAssetUrl } from '../utils/assets';
 
 export default function Courses() {
   const { openEnquiryModal } = useEnquiry();
@@ -72,19 +73,19 @@ export default function Courses() {
   return (
     <div className="bg-[#F8FAFC] min-h-screen">
       {/* 1. AlmaBetter-Style Dark Hero Header */}
-      <section className="bg-[#0B0F17] text-white pt-16 pb-20 md:pt-20 md:pb-24 relative overflow-hidden border-b border-white/10">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#F00037]/20 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-[#041934] text-white pt-16 pb-20 md:pt-20 md:pb-24 relative overflow-hidden border-b border-white/10">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#D39B3A]/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-red-300 text-xs sm:text-sm font-bold mb-5 backdrop-blur-sm">
-            <Sparkles className="w-4 h-4 text-[#F00037]" />
+            <Sparkles className="w-4 h-4 text-[#D39B3A]" />
             <span>Practical Computer Coaching • Engineered for Real Tech Outcomes</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
             Master High-Demand Programming Skills with{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F00037] via-[#FF4D79] to-[#38BDF8]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D39B3A] via-[#FF4D79] to-[#38BDF8]">
               Hands-On Lab Practice.
             </span>
           </h1>
@@ -96,16 +97,16 @@ export default function Courses() {
           {/* Quick Stats Pill Row */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-slate-300">
             <span className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#F00037]" /> 4 In-Demand Tracks
+              <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" /> 4 In-Demand Tracks
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#F00037]" /> 80% Practical Lab Work
+              <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" /> 80% Practical Lab Work
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#F00037]" /> 1:1 Doubt Mentoring
+              <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" /> 1:1 Doubt Mentoring
             </span>
             <span className="px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#F00037]" /> Verified Portfolio
+              <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" /> Verified Portfolio
             </span>
           </div>
         </div>
@@ -128,7 +129,7 @@ export default function Courses() {
                   onClick={() => setSelectedCategory(cat.value)}
                   className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 ${
                     selectedCategory === cat.value
-                      ? 'bg-[#F00037] text-white shadow-md shadow-red-500/20'
+                      ? 'bg-[#D39B3A] text-white shadow-md shadow-amber-500/20'
                       : 'bg-slate-100 hover:bg-slate-200 text-slate-700'
                   }`}
                 >
@@ -154,7 +155,7 @@ export default function Courses() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search skills, tools, tracks..."
-                className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#F00037] focus:ring-2 focus:ring-red-100 transition-all"
+                className="w-full pl-10 pr-4 py-2 rounded-xl border border-slate-200 bg-slate-50 text-xs sm:text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:bg-white focus:border-[#D39B3A] focus:ring-2 focus:ring-amber-100 transition-all"
               />
               {searchQuery && (
                 <button
@@ -182,7 +183,7 @@ export default function Courses() {
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="mt-4 px-4 py-2 rounded-xl bg-[#F00037] text-white text-xs font-bold"
+                className="mt-4 px-4 py-2 rounded-xl bg-[#D39B3A] text-white text-xs font-bold"
               >
                 Reset Filters
               </button>
@@ -197,7 +198,7 @@ export default function Courses() {
                   <div
                     key={course.id}
                     id={course.id}
-                    className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-[#F00037]/40 card-hover-lift transition-all duration-300 overflow-hidden flex flex-col justify-between"
+                    className="bg-white rounded-3xl border border-slate-200 shadow-sm hover:shadow-2xl hover:border-[#D39B3A]/40 card-hover-lift transition-all duration-300 overflow-hidden flex flex-col justify-between"
                     data-aos="fade-up"
                     data-aos-delay={index * 80}
                   >
@@ -205,20 +206,20 @@ export default function Courses() {
                       {/* Landscape Image Banner with AlmaBetter Badges */}
                       <div className="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
                         <img
-                          src={course.image}
+                          src={getAssetUrl(course.image)}
                           alt={`${course.title} course at SCOPE INSTITUTE`}
                           className="w-full h-full object-cover opacity-85 hover:opacity-100 hover:scale-105 transition-all duration-500"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-slate-950/40 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#041934] via-slate-950/40 to-transparent" />
 
                         {/* Top Badges */}
                         <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                          <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-[#F00037] text-white shadow-md">
+                          <span className="px-3.5 py-1 rounded-full text-xs font-bold bg-[#D39B3A] text-white shadow-md">
                             {course.badge}
                           </span>
                           <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/95 text-slate-900 shadow-md flex items-center gap-1.5">
-                            <Clock className="w-3.5 h-3.5 text-[#F00037]" /> {course.duration}
+                            <Clock className="w-3.5 h-3.5 text-[#D39B3A]" /> {course.duration}
                           </span>
                         </div>
 
@@ -235,12 +236,12 @@ export default function Courses() {
                       </div>
 
                       {/* Next Batch Schedule Alert Ribbon */}
-                      <div className="px-6 py-2.5 bg-[#FFF4F7] border-b border-[#F00037]/15 flex items-center justify-between text-xs">
+                      <div className="px-6 py-2.5 bg-[#FDF9F0] border-b border-[#D39B3A]/15 flex items-center justify-between text-xs">
                         <div className="flex items-center gap-2 text-slate-800 font-semibold">
-                          <Calendar className="w-3.5 h-3.5 text-[#F00037]" />
+                          <Calendar className="w-3.5 h-3.5 text-[#D39B3A]" />
                           <span>{course.nextBatch}</span>
                         </div>
-                        <span className="font-bold text-[#F00037]">{course.seatsRemaining}</span>
+                        <span className="font-bold text-[#D39B3A]">{course.seatsRemaining}</span>
                       </div>
 
                       {/* Card Content & Interactive Tabs */}
@@ -281,12 +282,12 @@ export default function Courses() {
                             onClick={() => setCourseTab(course.id, 'projects')}
                             className={`flex-1 py-2 rounded-lg transition-all cursor-pointer flex items-center justify-center gap-1 ${
                               currentTab === 'projects'
-                                ? 'bg-white text-[#F00037] shadow-xs'
+                                ? 'bg-white text-[#D39B3A] shadow-xs'
                                 : 'text-slate-600 hover:text-slate-900'
                             }`}
                           >
                             <span>Projects</span>
-                            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-[#FFF4F7] text-[#F00037]">
+                            <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-[#FDF9F0] text-[#D39B3A]">
                               {course.projects ? course.projects.length : 4}
                             </span>
                           </button>
@@ -305,13 +306,13 @@ export default function Courses() {
                         {/* Tab Content 1: Overview */}
                         {currentTab === 'overview' && (
                           <div className="space-y-4 animate-fadeIn">
-                            <p className="text-[#0B0F17] text-xs sm:text-sm leading-relaxed">
+                            <p className="text-[#041934] text-xs sm:text-sm leading-relaxed">
                               {course.fullDescription}
                             </p>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#0B0F17]">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#041934]">
                               {course.whatYouWillLearn.map((item, i) => (
                                 <div key={i} className="flex items-start gap-2">
-                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#F00037] shrink-0 mt-0.5" />
+                                  <CheckCircle2 className="w-3.5 h-3.5 text-[#D39B3A] shrink-0 mt-0.5" />
                                   <span>{item}</span>
                                 </div>
                               ))}
@@ -327,14 +328,14 @@ export default function Courses() {
                                 course.projects.map((proj, pIdx) => (
                                   <div
                                     key={pIdx}
-                                    className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3 hover:bg-[#FFF4F7]/40 transition-colors"
+                                    className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-start gap-3 hover:bg-[#FDF9F0]/40 transition-colors"
                                   >
-                                    <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 text-[#F00037] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                                    <div className="w-7 h-7 rounded-lg bg-white border border-slate-200 text-[#D39B3A] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
                                       0{pIdx + 1}
                                     </div>
                                     <div>
                                       <h4 className="text-xs font-bold text-slate-900">{proj.name}</h4>
-                                      <p className="text-[11px] text-[#0B0F17] mt-0.5 leading-snug">{proj.desc}</p>
+                                      <p className="text-[11px] text-[#041934] mt-0.5 leading-snug">{proj.desc}</p>
                                     </div>
                                   </div>
                                 ))}
@@ -353,7 +354,7 @@ export default function Courses() {
                                 {course.skills.map((skill, sIdx) => (
                                   <span
                                     key={sIdx}
-                                    className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/15"
+                                    className="px-2.5 py-1 rounded-lg text-xs font-semibold bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/15"
                                   >
                                     {skill}
                                   </span>
@@ -366,10 +367,10 @@ export default function Courses() {
                                 <h4 className="text-[11px] font-bold uppercase tracking-wider text-slate-800 mb-2">
                                   Prepares You for Roles
                                 </h4>
-                                <div className="flex flex-wrap gap-2 text-xs font-medium text-[#0B0F17]">
+                                <div className="flex flex-wrap gap-2 text-xs font-medium text-[#041934]">
                                   {course.targetRoles.map((role, rIdx) => (
                                     <span key={rIdx} className="flex items-center gap-1.5 bg-slate-100 px-2.5 py-1 rounded-lg">
-                                      <Briefcase className="w-3 h-3 text-[#F00037]" />
+                                      <Briefcase className="w-3 h-3 text-[#D39B3A]" />
                                       {role}
                                     </span>
                                   ))}
@@ -387,10 +388,10 @@ export default function Courses() {
                               className="w-full flex items-center justify-between p-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-800 transition-colors cursor-pointer"
                             >
                               <span className="flex items-center gap-2">
-                                <BookOpen className="w-4 h-4 text-[#F00037]" />
+                                <BookOpen className="w-4 h-4 text-[#D39B3A]" />
                                 {isCurriculumOpen ? 'Collapse Detailed Syllabus Breakdown' : 'View Week-by-Week Curriculum & Deliverables'}
                               </span>
-                              {isCurriculumOpen ? <ChevronUp className="w-4 h-4 text-[#F00037]" /> : <ChevronDown className="w-4 h-4" />}
+                              {isCurriculumOpen ? <ChevronUp className="w-4 h-4 text-[#D39B3A]" /> : <ChevronDown className="w-4 h-4" />}
                             </button>
 
                             {isCurriculumOpen && (
@@ -405,7 +406,7 @@ export default function Courses() {
                                         </span>
                                       )}
                                     </div>
-                                    <p className="text-[#0B0F17] text-[11px]">{c.details}</p>
+                                    <p className="text-[#041934] text-[11px]">{c.details}</p>
                                   </div>
                                 ))}
                               </div>
@@ -427,7 +428,7 @@ export default function Courses() {
 
                       <button
                         onClick={() => openEnquiryModal(course.title)}
-                        className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white text-xs sm:text-sm font-bold shadow-lg shadow-red-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+                        className="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-xl bg-[#D39B3A] hover:bg-[#B88226] text-white text-xs sm:text-sm font-bold shadow-lg shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
                       >
                         <Send className="w-4 h-4" />
                         <span>Enquire for Batch</span>
@@ -445,55 +446,55 @@ export default function Courses() {
       <section className="py-16 md:py-20 bg-white border-y border-slate-200/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/20 mb-3">
               <Laptop className="w-3.5 h-3.5" />
               <span>The Lab Environment</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               What Every SCOPE Institute Program Includes
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17]">
+            <p className="mt-3 text-base text-[#041934]">
               We design our training to simulate professional engineering teams with modern tooling, active coding, and personal reviews.
             </p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 card-hover-lift transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center font-bold mb-4 border border-[#F00037]/15">
+              <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center font-bold mb-4 border border-[#D39B3A]/15">
                 <Laptop className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">Dedicated Lab Systems</h3>
-              <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#041934] leading-relaxed">
                 Work directly on pre-configured developer machines with Python, Node.js, Git, and VS Code ready to code from day one.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 card-hover-lift transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center font-bold mb-4 border border-[#F00037]/15">
+              <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center font-bold mb-4 border border-[#D39B3A]/15">
                 <Terminal className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">Live Code Demonstration</h3>
-              <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#041934] leading-relaxed">
                 Instructors code every algorithm and component live in class, demonstrating real debugging workflows.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 card-hover-lift transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center font-bold mb-4 border border-[#F00037]/15">
+              <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center font-bold mb-4 border border-[#D39B3A]/15">
                 <Users2 className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">1:1 Code Reviews</h3>
-              <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#041934] leading-relaxed">
                 Mentors review your variable naming, logic structure, and Git commits to build clean software engineering habits.
               </p>
             </div>
 
             <div className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 card-hover-lift transition-all">
-              <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center font-bold mb-4 border border-[#F00037]/15">
+              <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center font-bold mb-4 border border-[#D39B3A]/15">
                 <FolderGit2 className="w-6 h-6" />
               </div>
               <h3 className="text-base font-bold text-slate-900 mb-2">GitHub Project Portfolio</h3>
-              <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#041934] leading-relaxed">
                 Build and deploy real applications to public GitHub repositories and cloud hosting to showcase in job applications.
               </p>
             </div>
@@ -506,13 +507,13 @@ export default function Courses() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12" data-aos="fade-up">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-200 text-slate-700 mb-3">
-              <Layers className="w-3.5 h-3.5 text-[#F00037]" />
+              <Layers className="w-3.5 h-3.5 text-[#D39B3A]" />
               <span>Curriculum Comparison</span>
             </span>
-            <h2 className="text-3xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#041934] tracking-tight">
               Compare Our Tech Tracks Side-by-Side
             </h2>
-            <p className="mt-2 text-sm text-[#0B0F17]">
+            <p className="mt-2 text-sm text-[#041934]">
               Find the right match based on your current knowledge, career goals, and time commitment.
             </p>
           </div>
@@ -521,7 +522,7 @@ export default function Courses() {
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-xs sm:text-sm">
                 <thead>
-                  <tr className="bg-[#0B0F17] text-white">
+                  <tr className="bg-[#041934] text-white">
                     <th className="p-4 sm:p-5 font-bold">Track Name</th>
                     <th className="p-4 sm:p-5 font-bold">Duration</th>
                     <th className="p-4 sm:p-5 font-bold">Level</th>
@@ -532,10 +533,10 @@ export default function Courses() {
                 </thead>
                 <tbody className="divide-y divide-slate-100">
                   {COURSES.map((c) => (
-                    <tr key={c.id} className="hover:bg-[#FFF4F7]/30 transition-colors">
+                    <tr key={c.id} className="hover:bg-[#FDF9F0]/30 transition-colors">
                       <td className="p-4 sm:p-5">
                         <span className="font-extrabold text-slate-900 block text-sm">{c.title}</span>
-                        <span className="text-[11px] text-[#0B0F17] font-semibold">{c.category}</span>
+                        <span className="text-[11px] text-[#041934] font-semibold">{c.category}</span>
                       </td>
                       <td className="p-4 sm:p-5 font-semibold text-slate-700">{c.duration}</td>
                       <td className="p-4 sm:p-5">
@@ -546,11 +547,11 @@ export default function Courses() {
                       <td className="p-4 sm:p-5 font-semibold text-slate-800">
                         {c.projects ? c.projects.length : 4} Real Projects
                       </td>
-                      <td className="p-4 sm:p-5 text-[#0B0F17] text-xs max-w-xs">{c.prerequisites}</td>
+                      <td className="p-4 sm:p-5 text-[#041934] text-xs max-w-xs">{c.prerequisites}</td>
                       <td className="p-4 sm:p-5 text-right">
                         <button
                           onClick={() => openEnquiryModal(c.title)}
-                          className="px-4 py-2 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white text-xs font-bold shadow-xs cursor-pointer"
+                          className="px-4 py-2 rounded-xl bg-[#D39B3A] hover:bg-[#B88226] text-white text-xs font-bold shadow-xs cursor-pointer"
                         >
                           Enquire
                         </button>

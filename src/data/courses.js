@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assets';
+
 export const COURSES = [
   {
     id: "python-programming",
@@ -13,7 +15,7 @@ export const COURSES = [
     category: "Programming & Logic",
     color: "from-blue-600 to-indigo-700",
     iconName: "Code2",
-    image: "/images/course-python.jpg",
+    image: getAssetUrl("/images/course-python.jpg"),
     nextBatch: "Starts This Monday & Saturday",
     seatsRemaining: "5 Seats Available",
     prerequisites: "No prior programming experience required. Basic computer familiarity.",
@@ -54,7 +56,7 @@ export const COURSES = [
     category: "Web Development",
     color: "from-amber-500 to-orange-600",
     iconName: "Layout",
-    image: "/images/course-html-css.jpg",
+    image: getAssetUrl("/images/course-html-css.jpg"),
     nextBatch: "Starts This Monday & Saturday",
     seatsRemaining: "6 Seats Available",
     prerequisites: "Zero coding experience needed. Open to all students & career switchers.",
@@ -94,7 +96,7 @@ export const COURSES = [
     category: "Web Development",
     color: "from-yellow-500 to-amber-600",
     iconName: "FileCode2",
-    image: "/images/course-javascript.jpg",
+    image: getAssetUrl("/images/course-javascript.jpg"),
     nextBatch: "Starts This Monday & Saturday",
     seatsRemaining: "4 Seats Available",
     prerequisites: "Basic knowledge of HTML & CSS recommended.",
@@ -135,7 +137,7 @@ export const COURSES = [
     category: "Web Development",
     color: "from-cyan-500 to-blue-600",
     iconName: "Atom",
-    image: "/images/course-react.svg",
+    image: getAssetUrl("/images/course-react.svg"),
     nextBatch: "Starts This Monday & Saturday",
     seatsRemaining: "3 Seats Available",
     prerequisites: "Good understanding of JavaScript (ES6+), HTML, and CSS.",

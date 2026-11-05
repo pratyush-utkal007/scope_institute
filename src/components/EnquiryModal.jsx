@@ -111,8 +111,8 @@ export default function EnquiryModal() {
         className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100 transform transition-all duration-300 scale-100 max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* AlmaBetter-Style Modal Header */}
-        <div className="bg-gradient-to-r from-[#0B0F17] via-[#102A43] to-[#0B0F17] text-white p-6 relative border-b border-white/10">
+        {/* Modal Header */}
+        <div className="bg-gradient-to-r from-[#020E1D] via-[#041934] to-[#0B254A] text-white p-6 relative border-b border-[#D39B3A]/20">
           <button
             onClick={closeEnquiryModal}
             disabled={isSubmitting}
@@ -123,8 +123,8 @@ export default function EnquiryModal() {
           </button>
 
           <div className="flex items-center gap-2 mb-2">
-            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#F00037]/25 text-red-300 border border-[#F00037]/40 uppercase tracking-wider">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#F00037]" /> Admissions Desk
+            <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#D39B3A]/20 text-[#F5C067] border border-[#D39B3A]/40 uppercase tracking-wider">
+              <ShieldCheck className="w-3.5 h-3.5 text-[#D39B3A]" /> Admissions Desk
             </span>
           </div>
 
@@ -141,7 +141,7 @@ export default function EnquiryModal() {
           {/* Full Name */}
           <div>
             <label htmlFor="modal-fullName" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
-              Full Name <span className="text-[#F00037]">*</span>
+              Full Name <span className="text-[#D39B3A]">*</span>
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -159,12 +159,12 @@ export default function EnquiryModal() {
                 className={`w-full pl-10 pr-4 py-2.5 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                   errors.fullName && touched.fullName
                     ? 'border-red-400 focus:ring-red-200 bg-red-50/30'
-                    : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                    : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                 }`}
               />
             </div>
             {errors.fullName && touched.fullName && (
-              <p className="text-xs text-[#F00037] mt-1">{errors.fullName}</p>
+              <p className="text-xs text-red-500 mt-1">{errors.fullName}</p>
             )}
           </div>
 
@@ -173,7 +173,7 @@ export default function EnquiryModal() {
             {/* Mobile Number */}
             <div>
               <label htmlFor="modal-mobileNumber" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
-                Mobile Number <span className="text-[#F00037]">*</span>
+                Mobile Number <span className="text-[#D39B3A]">*</span>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -192,19 +192,19 @@ export default function EnquiryModal() {
                   className={`w-full pl-10 pr-3 py-2.5 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                     errors.mobileNumber && touched.mobileNumber
                       ? 'border-red-400 focus:ring-red-200 bg-red-50/30'
-                      : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                      : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                   }`}
                 />
               </div>
               {errors.mobileNumber && touched.mobileNumber && (
-                <p className="text-xs text-[#F00037] mt-1">{errors.mobileNumber}</p>
+                <p className="text-xs text-red-500 mt-1">{errors.mobileNumber}</p>
               )}
             </div>
 
             {/* Email Address */}
             <div>
               <label htmlFor="modal-email" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
-                Email Address <span className="text-[#F00037]">*</span>
+                Email Address <span className="text-[#D39B3A]">*</span>
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
@@ -222,12 +222,12 @@ export default function EnquiryModal() {
                   className={`w-full pl-10 pr-3 py-2.5 rounded-xl border text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 transition-all ${
                     errors.email && touched.email
                       ? 'border-red-400 focus:ring-red-200 bg-red-50/30'
-                      : 'border-slate-200 focus:border-[#F00037] focus:ring-red-100 bg-white'
+                      : 'border-slate-200 focus:border-[#D39B3A] focus:ring-amber-100 bg-white'
                   }`}
                 />
               </div>
               {errors.email && touched.email && (
-                <p className="text-xs text-[#F00037] mt-1">{errors.email}</p>
+                <p className="text-xs text-red-500 mt-1">{errors.email}</p>
               )}
             </div>
           </div>
@@ -235,7 +235,7 @@ export default function EnquiryModal() {
           {/* Course Selection */}
           <div>
             <label htmlFor="modal-course" className="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-1.5">
-              Select Track <span className="text-[#F00037]">*</span>
+              Select Track <span className="text-[#D39B3A]">*</span>
             </label>
             <CustomSelect
               id="modal-course"
@@ -249,7 +249,7 @@ export default function EnquiryModal() {
               placeholder="Select a programming track"
             />
             {errors.course && touched.course && (
-              <p className="text-xs text-[#F00037] mt-1">{errors.course}</p>
+              <p className="text-xs text-red-500 mt-1">{errors.course}</p>
             )}
           </div>
 
@@ -266,13 +266,13 @@ export default function EnquiryModal() {
               onChange={handleChange}
               disabled={isSubmitting}
               placeholder="e.g., Weekend batch preferred, beginner background..."
-              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#F00037] focus:ring-2 focus:ring-red-100 transition-all resize-none"
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-[#D39B3A] focus:ring-2 focus:ring-amber-100 transition-all resize-none"
             />
           </div>
 
           {/* Trust reassurance */}
-          <div className="flex items-center gap-2 p-3 bg-[#FFF4F7] rounded-xl border border-[#F00037]/20 text-xs text-[#0B0F17] font-medium">
-            <CheckCircle className="w-4 h-4 text-[#F00037] shrink-0" />
+          <div className="flex items-center gap-2 p-3 bg-[#FDF9F0] rounded-xl border border-[#D39B3A]/25 text-xs text-[#041934] font-medium">
+            <CheckCircle className="w-4 h-4 text-[#D39B3A] shrink-0" />
             <span>100% Free counselling session. No spam. Instant curriculum on WhatsApp/Email.</span>
           </div>
 
@@ -281,7 +281,7 @@ export default function EnquiryModal() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm shadow-xl shadow-red-500/25 transition-all transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+              className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#D39B3A] via-[#C89332] to-[#B88226] hover:from-[#BE8426] hover:to-[#A3701B] text-white font-bold text-sm shadow-xl shadow-amber-500/25 transition-all transform active:scale-[0.99] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
             >
               {isSubmitting ? (
                 <>

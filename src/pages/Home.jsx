@@ -139,17 +139,17 @@ export default function Home() {
       {/* 1. AlmaBetter-Style Hero Section */}
       <Hero />
 
-      {/* 2. Flagship Programs Section (AlmaBetter Program Grid) */}
+      {/* 2. Flagship Programs Section */}
       <section className="py-16 md:py-24 bg-[#F8FAFC] border-b border-slate-200/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#041934] border border-[#D39B3A]/30 mb-3">
               <span>Flagship Tech Programs</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               Our Professional Training Courses
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17] font-normal">
+            <p className="mt-3 text-base text-slate-600 font-normal">
               Each program includes hands-on lab assignments, code reviews, and capstone projects designed to make you technically confident.
             </p>
           </div>
@@ -165,24 +165,24 @@ export default function Home() {
           <div className="text-center mt-12" data-aos="fade-up">
             <Link
               to="/courses"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white border border-slate-200 text-[#0B0F17] font-bold text-sm shadow-xs hover:border-[#F00037] hover:text-[#F00037] transition-all group"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-white border border-slate-200 text-[#041934] font-bold text-sm shadow-xs hover:border-[#D39B3A] hover:text-[#D39B3A] transition-all group"
             >
               <span>Explore Detailed Week-by-Week Syllabi & Curriculum</span>
-              <ArrowRight className="w-4 h-4 text-[#F00037] group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 text-[#D39B3A] group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 3. AlmaBetter-Style Dark Breakout Section (Masterclass / Pedagogy Banner) */}
-      <section className="py-16 md:py-20 bg-[#0B0F17] text-white relative overflow-hidden">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#F00037]/15 rounded-full blur-3xl pointer-events-none" />
+      {/* 3. Dark Breakout Section (Masterclass / Pedagogy Banner) */}
+      <section className="py-16 md:py-20 bg-[#020E1D] text-white relative overflow-hidden">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#D39B3A]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10" data-aos="zoom-in">
-          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-slate-900 via-[#102A43] to-slate-900 border border-white/10 shadow-2xl">
+          <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#041934] via-[#082347] to-[#041934] border border-[#D39B3A]/30 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-8 space-y-4">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-sky-300 text-xs font-semibold">
-                  <ShieldCheck className="w-4 h-4 text-[#F00037]" />
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#F5C067] text-xs font-semibold border border-[#D39B3A]/30">
+                  <ShieldCheck className="w-4 h-4 text-[#D39B3A]" />
                   <span>The SCOPE Institute Methodology</span>
                 </span>
                 <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
@@ -193,15 +193,15 @@ export default function Home() {
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-2 text-xs sm:text-sm text-slate-200">
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-[#F00037]" />
+                    <CheckCircle className="w-4 h-4 text-[#D39B3A]" />
                     <span>Live Code Demonstration</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-[#F00037]" />
+                    <CheckCircle className="w-4 h-4 text-[#D39B3A]" />
                     <span>Dedicated Lab Systems</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle className="w-4 h-4 text-[#F00037]" />
+                    <CheckCircle className="w-4 h-4 text-[#D39B3A]" />
                     <span>Instant Code Review</span>
                   </div>
                 </div>
@@ -210,7 +210,7 @@ export default function Home() {
               <div className="lg:col-span-4 flex justify-start lg:justify-end">
                 <button
                   onClick={() => openEnquiryModal()}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm shadow-xl shadow-red-500/30 transition-all cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#D39B3A] via-[#C89332] to-[#B88226] hover:from-[#BE8426] hover:to-[#A3701B] text-white font-bold text-sm shadow-xl shadow-amber-500/25 transition-all cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Book Free Counselling</span>
@@ -221,18 +221,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. Why Choose SCOPE INSTITUTE (AlmaBetter Feature Matrix) */}
+      {/* 4. Why Choose SCOPE INSTITUTE */}
       <section className="py-16 md:py-24 bg-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
-              <Target className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#041934] border border-[#D39B3A]/30 mb-3">
+              <Target className="w-3.5 h-3.5 text-[#D39B3A]" />
               <span>The SCOPE Advantage</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               Why Choose SCOPE INSTITUTE?
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17]">
+            <p className="mt-3 text-base text-slate-600">
               We stand apart through our commitment to practical coding ability, personalized student attention, and modern curricula.
             </p>
           </div>
@@ -243,17 +243,17 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="p-7 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-[#F00037]/30 hover:bg-white card-hover-lift transition-all group"
+                  className="p-7 rounded-2xl bg-[#F8FAFC] border border-slate-200 hover:border-[#D39B3A]/40 hover:bg-white card-hover-lift transition-all group"
                   data-aos="fade-up"
                   data-aos-delay={index * 80}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center mb-5 group-hover:bg-[#F00037] group-hover:text-white transition-colors duration-300 shadow-xs">
+                  <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center mb-5 group-hover:bg-[#041934] group-hover:text-[#F5C067] transition-colors duration-300 shadow-xs border border-[#D39B3A]/20">
                     <IconComp className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-[#F00037] transition-colors">
+                  <h3 className="text-lg font-bold text-[#041934] mb-2 group-hover:text-[#D39B3A] transition-colors">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[#0B0F17] leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
                 </div>
@@ -263,18 +263,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. AlmaBetter-Style Learning Journey Roadmap */}
+      {/* 5. Learning Journey Roadmap */}
       <section className="py-16 md:py-24 bg-gradient-to-b from-[#F8FAFC] to-white border-b border-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-700 border border-blue-200/60 mb-3">
-              <Award className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#041934] border border-[#D39B3A]/30 mb-3">
+              <Award className="w-3.5 h-3.5 text-[#D39B3A]" />
               <span>Step-by-Step Pathway</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               Your Learning Journey with Us
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17]">
+            <p className="mt-3 text-base text-slate-600">
               A structured 4-step path crafted to take you from a curious beginner to a confident technology practitioner.
             </p>
           </div>
@@ -285,28 +285,28 @@ export default function Home() {
               return (
                 <div
                   key={index}
-                  className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#F00037]/30 card-hover-lift transition-all flex flex-col justify-between group"
+                  className="relative p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-[#D39B3A]/40 card-hover-lift transition-all flex flex-col justify-between group"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-3xl font-black text-slate-200 group-hover:text-[#F00037]/30 transition-colors">
+                      <span className="text-3xl font-black text-slate-200 group-hover:text-[#D39B3A]/40 transition-colors">
                         {step.step}
                       </span>
-                      <div className="w-10 h-10 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center">
+                      <div className="w-10 h-10 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center border border-[#D39B3A]/20">
                         <StepIcon className="w-5 h-5" />
                       </div>
                     </div>
-                    <h3 className="text-base font-bold text-slate-900 mb-2 group-hover:text-[#F00037] transition-colors">
+                    <h3 className="text-base font-bold text-[#041934] mb-2 group-hover:text-[#D39B3A] transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                       {step.desc}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-3 border-t border-slate-100 flex items-center text-xs font-bold text-[#F00037]">
+                  <div className="mt-6 pt-3 border-t border-slate-100 flex items-center text-xs font-bold text-[#D39B3A]">
                     <span>Phase {step.step} Milestone</span>
                   </div>
                 </div>
@@ -316,17 +316,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. AlmaBetter-Style Technologies Covered Ticker */}
-      <section className="relative overflow-hidden py-14 sm:py-16 bg-gradient-to-r from-[#070A0F] via-[#14060A] to-[#070A0F] border-y border-red-950/40 shadow-2xl">
-        {/* Ambient Red Glow Lights */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-600/15 via-transparent to-transparent pointer-events-none" />
-        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-40 bg-[#F00037]/20 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute -bottom-20 right-10 w-72 h-40 bg-red-900/15 rounded-full blur-3xl pointer-events-none" />
+      {/* 6. Technologies Covered Ticker */}
+      <section className="relative overflow-hidden py-14 sm:py-16 bg-gradient-to-r from-[#020E1D] via-[#041934] to-[#020E1D] border-y border-[#D39B3A]/30 shadow-2xl">
+        {/* Ambient Glow Lights */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-amber-500/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-96 h-40 bg-[#D39B3A]/15 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-20 right-10 w-72 h-40 bg-blue-900/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center mb-8" data-aos="fade-up">
-            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-red-500/10 border border-[#F00037]/30 text-[11px] sm:text-xs uppercase font-extrabold tracking-wider text-red-400 shadow-inner">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#F00037] animate-pulse" />
+            <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D39B3A]/15 border border-[#D39B3A]/35 text-[11px] sm:text-xs uppercase font-extrabold tracking-wider text-[#F5C067] shadow-inner">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D39B3A] animate-pulse" />
               Technologies & Developer Tools Covered
             </span>
           </div>
@@ -335,17 +335,17 @@ export default function Home() {
             {techTools.map((tool, idx) => (
               <div
                 key={idx}
-                className="group relative p-3.5 text-center rounded-2xl bg-gradient-to-b from-[#161B26]/90 to-[#0F141E]/90 border border-slate-800/90 hover:border-[#F00037]/60 hover:shadow-lg hover:shadow-red-600/20 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
+                className="group relative p-3.5 text-center rounded-2xl bg-[#0B254A]/40 border border-slate-700/60 hover:border-[#D39B3A]/60 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm"
                 data-aos="fade-up"
                 data-aos-delay={idx * 40}
               >
-                {/* Subtle top red glow line on hover */}
-                <div className="absolute inset-x-3 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#F00037] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                {/* Subtle top gold glow line on hover */}
+                <div className="absolute inset-x-3 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#D39B3A] to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
-                <p className="text-xs font-bold text-white group-hover:text-red-300 transition-colors tracking-tight">
+                <p className="text-xs font-bold text-white group-hover:text-[#F5C067] transition-colors tracking-tight">
                   {tool.name}
                 </p>
-                <p className="text-[10px] text-slate-400 group-hover:text-slate-300 font-medium mt-1 leading-tight">
+                <p className="text-[10px] text-slate-300 group-hover:text-white font-medium mt-1 leading-tight">
                   {tool.category}
                 </p>
               </div>
@@ -354,18 +354,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. AlmaBetter-Style Collapsible FAQ Section */}
+      {/* 7. Collapsible FAQ Section */}
       <section className="py-16 md:py-24 bg-[#F8FAFC] border-b border-slate-200/60">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-slate-200/60 text-slate-700 mb-3">
-              <HelpCircle className="w-3.5 h-3.5 text-[#F00037]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#041934] border border-[#D39B3A]/30 mb-3">
+              <HelpCircle className="w-3.5 h-3.5 text-[#D39B3A]" />
               <span>Frequently Asked Questions</span>
             </span>
-            <h2 className="text-3xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl font-extrabold text-[#041934] tracking-tight">
               Everything You Need to Know
             </h2>
-            <p className="mt-2 text-sm text-[#0B0F17]">
+            <p className="mt-2 text-sm text-slate-600">
               Find quick answers to common queries regarding our programs, batches, and lab infrastructure.
             </p>
           </div>
@@ -380,17 +380,17 @@ export default function Home() {
                 >
                   <button
                     onClick={() => toggleFaq(idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-slate-900 hover:text-[#F00037] transition-colors cursor-pointer"
+                    className="w-full p-5 text-left flex items-center justify-between gap-4 font-bold text-[#041934] hover:text-[#D39B3A] transition-colors cursor-pointer"
                   >
                     <span className="text-sm sm:text-base">{faq.q}</span>
                     {isOpen ? (
-                      <ChevronUp className="w-5 h-5 text-[#F00037] shrink-0" />
+                      <ChevronUp className="w-5 h-5 text-[#D39B3A] shrink-0" />
                     ) : (
                       <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                     )}
                   </button>
                   {isOpen && (
-                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-[#0B0F17] leading-relaxed border-t border-slate-100 animate-fadeIn">
+                    <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 animate-fadeIn">
                       {faq.a}
                     </div>
                   )}

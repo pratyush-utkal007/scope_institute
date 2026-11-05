@@ -76,8 +76,8 @@ export default function CustomSelect({
           error
             ? 'border-red-400 bg-red-50/20 focus:ring-2 focus:ring-red-200'
             : isOpen
-            ? 'border-[#F00037] ring-2 ring-red-100 bg-white'
-            : 'border-slate-200 bg-white hover:border-slate-300'
+            ? 'border-[#D39B3A] ring-2 ring-amber-100 bg-white'
+            : 'border-slate-200 bg-white hover:border-[#D39B3A]/60'
         } ${disabled ? 'opacity-60 cursor-not-allowed bg-slate-50' : ''}`}
       >
         {/* Left Icon */}
@@ -104,7 +104,7 @@ export default function CustomSelect({
         {/* Animated Chevron */}
         <ChevronDown
           className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-            isOpen ? 'rotate-180 text-[#F00037]' : ''
+            isOpen ? 'rotate-180 text-[#D39B3A]' : ''
           }`}
         />
       </button>
@@ -128,8 +128,8 @@ export default function CustomSelect({
                 onClick={() => handleSelect(option)}
                 className={`flex items-center justify-between px-3.5 py-2.5 text-sm cursor-pointer transition-colors duration-150 ${
                   isSelected
-                    ? 'bg-[#FFF4F7] text-[#F00037] font-semibold'
-                    : 'text-slate-700 hover:bg-slate-50 hover:text-[#F00037]'
+                    ? 'bg-[#FDF9F0] text-[#041934] font-bold'
+                    : 'text-slate-700 hover:bg-slate-50 hover:text-[#041934]'
                 }`}
               >
                 <div className="flex flex-col sm:flex-row sm:items-center sm:gap-2">
@@ -137,7 +137,7 @@ export default function CustomSelect({
                   {option.duration && (
                     <span
                       className={`text-xs ${
-                        isSelected ? 'text-[#F00037]/80' : 'text-slate-400'
+                        isSelected ? 'text-[#D39B3A]' : 'text-slate-400'
                       }`}
                     >
                       ({option.duration}
@@ -147,7 +147,7 @@ export default function CustomSelect({
                 </div>
 
                 {isSelected && (
-                  <Check className="w-4 h-4 text-[#F00037] shrink-0 ml-2" />
+                  <Check className="w-4 h-4 text-[#D39B3A] shrink-0 ml-2" />
                 )}
               </div>
             );

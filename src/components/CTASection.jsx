@@ -11,15 +11,15 @@ export default function CTASection({
   const { openEnquiryModal } = useEnquiry();
 
   return (
-    <section className="relative overflow-hidden py-16 lg:py-24 bg-[#0B0F17] text-white">
+    <section className="relative overflow-hidden py-16 lg:py-24 bg-gradient-to-b from-[#020E1D] via-[#041934] to-[#020E1D] text-white">
       {/* Decorative Aura */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#F00037]/20 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#D39B3A]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-900/25 rounded-full blur-3xl pointer-events-none" />
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF4F7]/10 border border-[#F00037]/30 text-red-300 text-xs font-bold mb-6 backdrop-blur-sm">
-          <Sparkles className="w-3.5 h-3.5 text-[#F00037]" />
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FDF9F0]/10 border border-[#D39B3A]/30 text-[#F5C067] text-xs font-bold mb-6 backdrop-blur-sm">
+          <Sparkles className="w-3.5 h-3.5 text-[#D39B3A]" />
           <span>New Batches Starting Soon • Classroom & Lab Seats</span>
         </div>
 
@@ -36,15 +36,15 @@ export default function CTASection({
         {/* Benefits bar */}
         <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-8 mt-6 text-xs sm:text-sm text-slate-300 font-medium">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#F00037]" />
+            <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" />
             <span>Structured Practical Lab Work</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#F00037]" />
+            <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" />
             <span>Personal Mentor Attention</span>
           </div>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-[#F00037]" />
+            <CheckCircle2 className="w-4 h-4 text-[#D39B3A]" />
             <span>Weekend & Weekday Batches</span>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function CTASection({
         <div className="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4">
           <button
             onClick={() => openEnquiryModal(courseName)}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm sm:text-base shadow-xl shadow-red-500/30 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-[#D39B3A] via-[#C89332] to-[#B88226] hover:from-[#BE8426] hover:to-[#A3701B] text-white font-bold text-sm sm:text-base shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
           >
             <Send className="w-4 h-4" />
             <span>Enquire for Admission</span>
@@ -63,7 +63,7 @@ export default function CTASection({
             href={`tel:${INSTITUTE_INFO.phone}`}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm sm:text-base transition-colors"
           >
-            <PhoneCall className="w-4 h-4 text-slate-200" />
+            <PhoneCall className="w-4 h-4 text-[#F5C067]" />
             <span>Call Admissions Desk</span>
           </a>
         </div>

@@ -29,6 +29,7 @@ import {
 import CTASection from '../components/CTASection';
 import { useEnquiry } from '../hooks/useEnquiry';
 import { INSTITUTE_INFO } from '../data/courses';
+import { getAssetUrl } from '../utils/assets';
 
 export default function About() {
   const { openEnquiryModal } = useEnquiry();
@@ -160,21 +161,21 @@ export default function About() {
   ];
 
   return (
-    <div className="bg-white text-[#0B0F17]">
+    <div className="bg-white text-[#041934]">
       {/* 1. High-Prestige Dark Hero Header */}
-      <section className="bg-[#0B0F17] text-white pt-16 pb-20 md:pt-20 md:pb-24 relative overflow-hidden border-b border-white/10">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#F00037]/20 rounded-full blur-3xl pointer-events-none" />
+      <section className="bg-[#041934] text-white pt-16 pb-20 md:pt-20 md:pb-24 relative overflow-hidden border-b border-white/10">
+        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-[#D39B3A]/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-aos="fade-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-red-300 text-xs sm:text-sm font-bold mb-5 backdrop-blur-sm">
-            <GraduationCap className="w-4 h-4 text-[#F00037]" />
+            <GraduationCap className="w-4 h-4 text-[#D39B3A]" />
             <span>SCOPE INSTITUTE • Practical Computer Coaching & Software Mentorship</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-tight">
             Empowering Aspiring Coders With Real-World{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F00037] via-[#FF4D79] to-[#38BDF8]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#D39B3A] via-[#FF4D79] to-[#38BDF8]">
               Engineering Mastery.
             </span>
           </h1>
@@ -207,7 +208,7 @@ export default function About() {
           <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               to="/courses"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm shadow-xl shadow-red-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#D39B3A] hover:bg-[#B88226] text-white font-bold text-sm shadow-xl shadow-amber-500/25 transition-all transform hover:-translate-y-0.5 cursor-pointer"
             >
               <BookOpen className="w-4 h-4" />
               <span>Explore All 4 Programs</span>
@@ -218,7 +219,7 @@ export default function About() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold text-sm transition-all cursor-pointer"
             >
               <span>Schedule Free Lab Tour</span>
-              <ArrowRight className="w-4 h-4 text-[#F00037]" />
+              <ArrowRight className="w-4 h-4 text-[#D39B3A]" />
             </button>
           </div>
         </div>
@@ -228,33 +229,33 @@ export default function About() {
       <section className="relative -mt-10 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" data-aos="fade-up">
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xl card-hover-lift text-left">
-            <p className="text-3xl sm:text-4xl font-black text-[#F00037]">80%+</p>
-            <p className="text-sm font-bold text-[#0B0F17] mt-1">Hands-On Lab Time</p>
-            <p className="text-xs text-[#0B0F17] font-medium mt-1 leading-snug">
+            <p className="text-3xl sm:text-4xl font-black text-[#D39B3A]">80%+</p>
+            <p className="text-sm font-bold text-[#041934] mt-1">Hands-On Lab Time</p>
+            <p className="text-xs text-[#041934] font-medium mt-1 leading-snug">
               Active keyboard coding & debugging during every class session.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xl card-hover-lift text-left">
-            <p className="text-3xl sm:text-4xl font-black text-[#0B0F17]">15 Max</p>
-            <p className="text-sm font-bold text-[#0B0F17] mt-1">Students Per Batch</p>
-            <p className="text-xs text-[#0B0F17] font-medium mt-1 leading-snug">
+            <p className="text-3xl sm:text-4xl font-black text-[#041934]">15 Max</p>
+            <p className="text-sm font-bold text-[#041934] mt-1">Students Per Batch</p>
+            <p className="text-xs text-[#041934] font-medium mt-1 leading-snug">
               Guaranteed individual mentor attention without overcrowded halls.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xl card-hover-lift text-left">
-            <p className="text-3xl sm:text-4xl font-black text-[#0B0F17]">1:1</p>
-            <p className="text-sm font-bold text-[#0B0F17] mt-1">Doubt Consultation</p>
-            <p className="text-xs text-[#0B0F17] font-medium mt-1 leading-snug">
+            <p className="text-3xl sm:text-4xl font-black text-[#041934]">1:1</p>
+            <p className="text-sm font-bold text-[#041934] mt-1">Doubt Consultation</p>
+            <p className="text-xs text-[#041934] font-medium mt-1 leading-snug">
               Direct access to senior instructors to solve complex syntax issues.
             </p>
           </div>
 
           <div className="bg-white p-6 rounded-3xl border border-slate-200 shadow-xl card-hover-lift text-left">
-            <p className="text-3xl sm:text-4xl font-black text-[#F00037]">100%</p>
-            <p className="text-sm font-bold text-[#0B0F17] mt-1">GitHub Portfolio</p>
-            <p className="text-xs text-[#0B0F17] font-medium mt-1 leading-snug">
+            <p className="text-3xl sm:text-4xl font-black text-[#D39B3A]">100%</p>
+            <p className="text-sm font-bold text-[#041934] mt-1">GitHub Portfolio</p>
+            <p className="text-xs text-[#041934] font-medium mt-1 leading-snug">
               Every student leaves with real, public repositories built & deployed.
             </p>
           </div>
@@ -267,56 +268,56 @@ export default function About() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Story Column */}
             <div className="lg:col-span-7 space-y-6" data-aos="fade-right">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 text-xs font-bold">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/20 text-xs font-bold">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Our Engineering-First Philosophy</span>
               </div>
 
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight leading-tight">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#041934] tracking-tight leading-tight">
                 Coding Cannot Be Mastered by Watching Slides. You Learn by Writing Code.
               </h2>
 
-              <p className="text-base text-[#0B0F17] leading-relaxed font-normal">
-                Conventional coaching institutes often fill classrooms with 50+ students, read off PowerPoint decks, and assign theoretical questions. At <strong className="font-extrabold text-[#0B0F17]">SCOPE INSTITUTE</strong>, we completely reject this model.
+              <p className="text-base text-[#041934] leading-relaxed font-normal">
+                Conventional coaching institutes often fill classrooms with 50+ students, read off PowerPoint decks, and assign theoretical questions. At <strong className="font-extrabold text-[#041934]">SCOPE INSTITUTE</strong>, we completely reject this model.
               </p>
 
-              <p className="text-base text-[#0B0F17] leading-relaxed font-normal">
+              <p className="text-base text-[#041934] leading-relaxed font-normal">
                 Software engineering is a practical discipline—identical to surgical training or architecture. You only grow comfortable when you type syntax, observe errors in your browser console, decipher tracebacks in your terminal, and fix logic line-by-line. That is why our computer laboratory is the centerpiece of our institute.
               </p>
 
               {/* High-Contrast Feature Pillars */}
               <div className="space-y-3.5 pt-2">
                 <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="w-7 h-7 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#F00037]/15">
+                  <div className="w-7 h-7 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#D39B3A]/15">
                     ✓
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#0B0F17]">Live Instructor Coding in VS Code</h4>
-                    <p className="text-xs sm:text-sm text-[#0B0F17] mt-0.5 leading-relaxed font-normal">
+                    <h4 className="text-sm font-bold text-[#041934]">Live Instructor Coding in VS Code</h4>
+                    <p className="text-xs sm:text-sm text-[#041934] mt-0.5 leading-relaxed font-normal">
                       Mentors code from a blank editor in front of the batch. You watch how experienced developers think, format files, and diagnose unexpected runtime bugs in real time.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="w-7 h-7 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#F00037]/15">
+                  <div className="w-7 h-7 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#D39B3A]/15">
                     ✓
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#0B0F17]">Strict Cohort Limit (Max 15 per Batch)</h4>
-                    <p className="text-xs sm:text-sm text-[#0B0F17] mt-0.5 leading-relaxed font-normal">
+                    <h4 className="text-sm font-bold text-[#041934]">Strict Cohort Limit (Max 15 per Batch)</h4>
+                    <p className="text-xs sm:text-sm text-[#041934] mt-0.5 leading-relaxed font-normal">
                       We cap batches so no student gets overlooked. Instructors monitor each student’s keyboard progress, catching mistakes before bad habits form.
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="w-7 h-7 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#F00037]/15">
+                  <div className="w-7 h-7 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center shrink-0 mt-0.5 font-bold text-sm shadow-xs border border-[#D39B3A]/15">
                     ✓
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-[#0B0F17]">Industry Developer Tooling from Day 1</h4>
-                    <p className="text-xs sm:text-sm text-[#0B0F17] mt-0.5 leading-relaxed font-normal">
+                    <h4 className="text-sm font-bold text-[#041934]">Industry Developer Tooling from Day 1</h4>
+                    <p className="text-xs sm:text-sm text-[#041934] mt-0.5 leading-relaxed font-normal">
                       From week one, students use Git command line, commit their work to GitHub, practice clean code formatting, and structure real multi-file projects.
                     </p>
                   </div>
@@ -327,14 +328,14 @@ export default function About() {
             {/* Right Visual Showcase */}
             <div className="lg:col-span-5" data-aos="fade-left">
               <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative bg-[#0B0F17]">
+                <div className="rounded-3xl overflow-hidden shadow-2xl border border-slate-200 relative bg-[#041934]">
                   <img
-                    src="/images/about-lab.jpg"
+                    src={getAssetUrl("/images/about-lab.jpg")}
                     alt="Students coding together in computer lab at SCOPE INSTITUTE"
                     className="w-full h-[460px] object-cover opacity-90"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F17] via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#041934] via-transparent to-transparent" />
 
                   {/* Floating Metric Tag */}
                   <div className="absolute top-5 left-5 px-3.5 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/20 text-white text-xs font-bold flex items-center gap-2">
@@ -343,14 +344,14 @@ export default function About() {
                   </div>
 
                   {/* Floating Glassmorphism Quote Card */}
-                  <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/20 shadow-xl text-[#0B0F17]">
-                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#F00037] block mb-1">
+                  <div className="absolute bottom-5 left-5 right-5 p-5 rounded-2xl bg-white/95 backdrop-blur-md border border-white/20 shadow-xl text-[#041934]">
+                    <span className="text-[11px] font-extrabold uppercase tracking-wider text-[#D39B3A] block mb-1">
                       Our Core Commitment
                     </span>
-                    <p className="text-xs sm:text-sm font-bold leading-snug text-[#0B0F17]">
+                    <p className="text-xs sm:text-sm font-bold leading-snug text-[#041934]">
                       "We measure our success not by attendance certificates issued, but by real, working applications built and deployed by our students."
                     </p>
-                    <p className="text-[11px] text-[#0B0F17] font-semibold mt-2">
+                    <p className="text-[11px] text-[#041934] font-semibold mt-2">
                       — Academic Director, SCOPE INSTITUTE
                     </p>
                   </div>
@@ -365,14 +366,14 @@ export default function About() {
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/20 mb-3">
               <Terminal className="w-3.5 h-3.5" />
               <span>How We Teach</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               Our 4 Pillars of Practical Methodology
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17] font-normal">
+            <p className="mt-3 text-base text-[#041934] font-normal">
               A structured, laboratory-tested progression ensuring every learner turns concepts into muscle memory.
             </p>
           </div>
@@ -383,34 +384,34 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:border-[#F00037]/40 card-hover-lift transition-all group flex flex-col justify-between"
+                  className="p-6 rounded-3xl bg-white border border-slate-200/90 shadow-sm hover:border-[#D39B3A]/40 card-hover-lift transition-all group flex flex-col justify-between"
                   data-aos="fade-up"
                   data-aos-delay={index * 80}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="text-xs font-extrabold uppercase tracking-wider text-[#F00037] bg-[#FFF4F7] px-2.5 py-0.5 rounded-md border border-[#F00037]/20">
+                      <span className="text-xs font-extrabold uppercase tracking-wider text-[#D39B3A] bg-[#FDF9F0] px-2.5 py-0.5 rounded-md border border-[#D39B3A]/20">
                         {pillar.step}
                       </span>
-                      <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-[#F00037] flex items-center justify-center font-bold">
+                      <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 text-[#D39B3A] flex items-center justify-center font-bold">
                         <Icon className="w-5 h-5" />
                       </div>
                     </div>
 
-                    <h3 className="text-base font-bold text-[#0B0F17] mb-2 group-hover:text-[#F00037] transition-colors">
+                    <h3 className="text-base font-bold text-[#041934] mb-2 group-hover:text-[#D39B3A] transition-colors">
                       {pillar.title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed font-normal">
+                    <p className="text-xs sm:text-sm text-[#041934] leading-relaxed font-normal">
                       {pillar.desc}
                     </p>
                   </div>
 
                   <div className="mt-5 pt-3.5 border-t border-slate-100">
-                    <span className="text-[11px] font-bold text-[#0B0F17] block">
+                    <span className="text-[11px] font-bold text-[#041934] block">
                       Target Deliverable:
                     </span>
-                    <span className="text-[11px] text-[#0B0F17] font-medium block mt-0.5">
+                    <span className="text-[11px] text-[#041934] font-medium block mt-0.5">
                       {pillar.deliverable}
                     </span>
                   </div>
@@ -429,10 +430,10 @@ export default function About() {
               <CalendarCheck className="w-3.5 h-3.5" />
               <span>Our Track Record</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               The Journey of SCOPE INSTITUTE
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17] font-normal">
+            <p className="mt-3 text-base text-[#041934] font-normal">
               Built step-by-step with an unwavering focus on laboratory excellence and student outcomes.
             </p>
           </div>
@@ -445,16 +446,16 @@ export default function About() {
                 data-aos="fade-up"
                 data-aos-delay={idx * 80}
               >
-                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 text-[#F00037] font-black text-lg flex items-center justify-center mb-4 shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 text-[#D39B3A] font-black text-lg flex items-center justify-center mb-4 shadow-xs">
                   {idx + 1}
                 </div>
-                <span className="text-xs font-extrabold text-[#F00037] tracking-wider uppercase">
+                <span className="text-xs font-extrabold text-[#D39B3A] tracking-wider uppercase">
                   {milestone.year}
                 </span>
-                <h3 className="text-base font-extrabold text-[#0B0F17] mt-1 mb-2">
+                <h3 className="text-base font-extrabold text-[#041934] mt-1 mb-2">
                   {milestone.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed font-normal">
+                <p className="text-xs sm:text-sm text-[#041934] leading-relaxed font-normal">
                   {milestone.desc}
                 </p>
               </div>
@@ -467,14 +468,14 @@ export default function About() {
       <section className="py-16 md:py-24 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/20 mb-3">
               <Building2 className="w-3.5 h-3.5" />
               <span>Campus Infrastructure</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               A Modern Coding Laboratory Built for Productivity
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17] font-normal">
+            <p className="mt-3 text-base text-[#041934] font-normal">
               High-performance hardware, fast network connectivity, and distraction-free desks in Bhubaneswar.
             </p>
           </div>
@@ -490,7 +491,7 @@ export default function About() {
                   data-aos-delay={specIdx * 80}
                 >
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 text-[#F00037] flex items-center justify-center font-bold shadow-xs">
+                    <div className="w-12 h-12 rounded-2xl bg-white border border-slate-200 text-[#D39B3A] flex items-center justify-center font-bold shadow-xs">
                       <SpecIcon className="w-6 h-6" />
                     </div>
                     <span className="text-[11px] font-bold text-slate-700 bg-white px-2.5 py-1 rounded-md border border-slate-200">
@@ -498,8 +499,8 @@ export default function About() {
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-[#0B0F17] mb-1.5">{spec.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed font-normal">
+                  <h3 className="text-base font-bold text-[#041934] mb-1.5">{spec.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#041934] leading-relaxed font-normal">
                     {spec.desc}
                   </p>
                 </div>
@@ -510,7 +511,7 @@ export default function About() {
           {/* Invitation Banner */}
           <div className="mt-12 p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6" data-aos="zoom-in">
             <div className="space-y-1 text-center md:text-left">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#F00037]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#D39B3A]">
                 Experience It In Person
               </span>
               <h4 className="text-xl sm:text-2xl font-extrabold text-white">
@@ -522,7 +523,7 @@ export default function About() {
             </div>
             <button
               onClick={() => openEnquiryModal()}
-              className="px-8 py-3.5 rounded-xl bg-[#F00037] hover:bg-[#D0002F] text-white font-bold text-sm shadow-xl shadow-red-500/25 transition-all shrink-0 cursor-pointer"
+              className="px-8 py-3.5 rounded-xl bg-[#D39B3A] hover:bg-[#B88226] text-white font-bold text-sm shadow-xl shadow-amber-500/25 transition-all shrink-0 cursor-pointer"
             >
               Book Free Lab Visit
             </button>
@@ -539,25 +540,25 @@ export default function About() {
               className="bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm card-hover-lift transition-all relative overflow-hidden"
               data-aos="fade-up"
             >
-              <div className="h-2 w-full bg-[#F00037] absolute top-0 left-0" />
-              <div className="w-12 h-12 rounded-xl bg-[#FFF4F7] text-[#F00037] flex items-center justify-center mb-6 font-bold">
+              <div className="h-2 w-full bg-[#D39B3A] absolute top-0 left-0" />
+              <div className="w-12 h-12 rounded-xl bg-[#FDF9F0] text-[#D39B3A] flex items-center justify-center mb-6 font-bold">
                 <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-extrabold text-[#0B0F17] mb-3">Our Mission</h3>
-              <p className="text-base text-[#0B0F17] leading-relaxed font-normal">
+              <h3 className="text-2xl font-extrabold text-[#041934] mb-3">Our Mission</h3>
+              <p className="text-base text-[#041934] leading-relaxed font-normal">
                 To democratize practical computer education by delivering structured, accessible, and high-impact programming coaching. We empower students of all academic backgrounds to master essential software technologies with clarity, confidence, and rigorous laboratory practice.
               </p>
-              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-[#0B0F17]">
+              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-[#041934]">
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Maintain relentless focus on practical code implementation.</span>
                 </li>
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Provide transparent, beginner-friendly coaching with zero prerequisites.</span>
                 </li>
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Nurture analytical problem-solving and software logic from scratch.</span>
                 </li>
               </ul>
@@ -569,25 +570,25 @@ export default function About() {
               data-aos="fade-up"
               data-aos-delay="100"
             >
-              <div className="h-2 w-full bg-[#0B0F17] absolute top-0 left-0" />
-              <div className="w-12 h-12 rounded-xl bg-slate-100 text-[#0B0F17] flex items-center justify-center mb-6 font-bold border border-slate-200">
+              <div className="h-2 w-full bg-[#041934] absolute top-0 left-0" />
+              <div className="w-12 h-12 rounded-xl bg-slate-100 text-[#041934] flex items-center justify-center mb-6 font-bold border border-slate-200">
                 <Compass className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-extrabold text-[#0B0F17] mb-3">Our Vision</h3>
-              <p className="text-base text-[#0B0F17] leading-relaxed font-normal">
+              <h3 className="text-2xl font-extrabold text-[#041934] mb-3">Our Vision</h3>
+              <p className="text-base text-[#041934] leading-relaxed font-normal">
                 To be recognized as a premier coaching destination that sets the benchmark for quality student outcomes, hands-on programming literacy, and ethical mentoring for aspiring software developers and technology professionals.
               </p>
-              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-[#0B0F17]">
+              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-[#041934]">
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Continuously refresh curriculum with modern software engineering standards.</span>
                 </li>
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Foster an encouraging classroom where questions and experimentation are welcomed.</span>
                 </li>
                 <li className="flex items-center gap-2 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#F00037] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#D39B3A] shrink-0" />
                   <span>Bridge the gap between academic theory and real-world software careers.</span>
                 </li>
               </ul>
@@ -600,14 +601,14 @@ export default function About() {
       <section className="py-16 md:py-24 bg-white border-b border-slate-200/70">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-14" data-aos="fade-up">
-            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4F7] text-[#F00037] border border-[#F00037]/20 mb-3">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FDF9F0] text-[#D39B3A] border border-[#D39B3A]/20 mb-3">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Our Code of Honor</span>
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0B0F17] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[#041934] tracking-tight">
               Institutional Values that Define Us
             </h2>
-            <p className="mt-3 text-base text-[#0B0F17] font-normal">
+            <p className="mt-3 text-base text-[#041934] font-normal">
               The ethical and educational principles guiding every lecture, lab drill, and student interaction.
             </p>
           </div>
@@ -618,15 +619,15 @@ export default function About() {
               return (
                 <div
                   key={vIdx}
-                  className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#F00037]/30 card-hover-lift transition-all"
+                  className="p-6 rounded-3xl bg-slate-50 border border-slate-200/80 hover:bg-white hover:border-[#D39B3A]/30 card-hover-lift transition-all"
                   data-aos="fade-up"
                   data-aos-delay={vIdx * 80}
                 >
-                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#F00037] flex items-center justify-center font-bold mb-4 shadow-xs">
+                  <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 text-[#D39B3A] flex items-center justify-center font-bold mb-4 shadow-xs">
                     <ValIcon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-base font-bold text-[#0B0F17] mb-2">{val.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#0B0F17] leading-relaxed font-normal">
+                  <h3 className="text-base font-bold text-[#041934] mb-2">{val.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#041934] leading-relaxed font-normal">
                     {val.desc}
                   </p>
                 </div>
